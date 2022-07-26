@@ -1,0 +1,12 @@
+kubectl create -f [filename]
+Kubectl get pods
+kubectl describe pod nginx
+kubectl get services
+kubectl delete -f nginx.yaml
+
+
+Let's update the Deployment object now so that it is running an Apache (httpd) container instead:
+kubectl set image pod/nginx nginx=httpd:alpine
+
+Now, change it back to the original configuration using the apply command:
+kubectl apply -f nginx.yaml
