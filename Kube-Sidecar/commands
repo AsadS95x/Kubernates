@@ -1,0 +1,4 @@
+example port forward:
+
+kubectl port-forward jenkins 9000:80
+kubectl logs pods/jenkins -c jenkins

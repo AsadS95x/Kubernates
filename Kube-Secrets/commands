@@ -1,0 +1,7 @@
+How to use the secrets keys
+
+sed 's,{{SECRET_KEY}},super-secret-key,g' credentials.yaml | kubectl apply -f -
+kubectl get secret credentials -o yaml
+
+kubectl exec -it todo -- bash
+echo $SECRET_KEY

@@ -1,0 +1,13 @@
+kubectl exec -it nginx -- sh
+:hostname, ip a
+
+Rolling Updates:
+
+kubectl set image deployment/backend backend=htrvolker/python-backend:numbers
+
+```
+kubectl get deployments
+```
+kubectl scale --replicas=6 deployment/backend
+kubectl get deployments
+
