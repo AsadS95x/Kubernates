@@ -1,0 +1,8 @@
+kubectl create ns nginx-team
+kubectl create ns apache-team
+kubectl create deployment --image nginx --namespace nginx-team nginx
+kubectl create deployment --image httpd --namespace apache-team httpd
+kubectl get deployments
+kubectl --namespace nginx-team get deployments
+kubectl --namespace apache-team get deployments
+kubectl delete ns nginx-team apache-team
